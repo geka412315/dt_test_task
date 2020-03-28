@@ -29,6 +29,7 @@ export const Button = styled.input`
 export const Input = styled.input`
   padding: 10px 20px;
   border: 1px solid grey;
+  width: 60%;
   border-radius: 3px;
 `;
 
@@ -61,13 +62,13 @@ export const CommentText = styled.p`
 `;
 
 export const Wrapper = styled.div`
-text-align: center;
-display: flex;
-flex-direction: column;
-border-radius: 5px;
-padding: 1rem;
-margin: 0 auto;
-box-shadow: -1px 4px 10px 0px rgba(0, 0, 0, 0.2);
-border: 1px solid grey;
-max-width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0 auto;
+  box-shadow: -1px 4px 10px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid grey;
+  max-width: 40%;
 `;

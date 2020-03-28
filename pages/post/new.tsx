@@ -5,7 +5,14 @@ import { connect } from 'react-redux';
 import Router from 'next/router';
 import Link from 'next/link';
 import { addPost } from '../../src/redux/UserData/actions';
-import { StyledForm, StyledLabel, Button, Input, Nav, A } from './styles';
+import {
+  StyledForm,
+  StyledLabel,
+  Button,
+  Input,
+  Nav,
+  A,
+} from '../../src/pages/styles';
 
 interface NewPageProps {
   addPost: ({ title, body: string }) => { payload: { id: number } };

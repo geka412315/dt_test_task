@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { Post, State } from '../../src/redux/types';
 import Link from 'next/link';
 import { loadPost } from '../../src/redux/UserData/actions';
-import { Text, CommentText, Wrapper, Nav, A } from './styles';
+import { Text, CommentText, Wrapper, Nav, A } from '../../src/pages/styles';
 
 interface PostPageProps {
   posts: { userData: State };

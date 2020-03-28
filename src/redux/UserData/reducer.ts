@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { State } from '../../redux/types';
+import { State, Post } from '../../redux/types';
 import { actionTypes } from './actions';
 
 export const initialState: State = {
@@ -8,19 +8,22 @@ export const initialState: State = {
   postData: null,
 };
 
-const successLoadData = (draft: any, { data }: any) => {
+const successLoadData = (draft: any, { data }: { data: Post[] }) => {
   draft.placeholderData = data.reverse();
 };
 
-const failureLoadData = (draft: any, { error }: any) => {
+const failureLoadData = (draft: any, { error }: { error: any }) => {
   draft.error = error;
 };
 
-const successLoadPost = (draft: any, { data }: any) => {
+const successLoadPost = (draft: any, { data }: { data: Post }) => {
   draft.postData = data;
 };
 
-const successAddNewPost = (draft: any, { data }: any) => {
+const successAddNewPost = (
+  draft: any,
+  { data }: { data: { title: string; body: string; id: number } }
+) => {
   draft.placeholderData = [
     {
       ...data,
@@ -30,7 +33,10 @@ const successAddNewPost = (draft: any, { data }: any) => {
   ];
 };
 
-const reducer = (state = initialState, action: any) => {
+const reducer = (
+  state = initialState,
+  action: { type: string; payload: any }
+) => {
   return produce(state, draft => {
     switch (action.type) {
       case actionTypes.LOAD_DATA_SUCCESS:
