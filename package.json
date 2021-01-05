@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "es6-promise": "^4.2.8",
     "immer": "^6.0.2",
     "next": "latest",
