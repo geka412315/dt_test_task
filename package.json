@@ -11,7 +11,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "es6-promise": "^4.2.8",
-    "immer": "^6.0.2",
+    "immer": "^8.0.1",
     "next": "latest",
     "next-redux-saga": "^4.0.2",
     "next-redux-wrapper": "^4.0.1",
